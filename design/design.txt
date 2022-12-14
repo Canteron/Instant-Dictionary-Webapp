@@ -5,7 +5,7 @@ The web app consists of a website with a navigation menu, a Home, Dictionary, an
 Objects: Definition:
             term
             get()
-         Navbar Esta y las siguientes clases ya existen no hya q reinventar la rueda
+         Navbar Esta y las siguientes clases ya existen no hay q reinventar la rueda
          HomePage
          DictionaryPage
          AboutPage
