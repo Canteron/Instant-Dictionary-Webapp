@@ -1,18 +1,19 @@
 import justpy as jp
 import definition
+from webapp import layout
+from webapp import page
 
 
-class Dictionary:
+class Dictionary(page.Abstractasoy):
     path = "/dictionary"
 
     @classmethod
     def serve(cls, req):
         wp = jp.QuasarPage(tailwind=True)
 
-        layout = jp.QLayout(a=wp, view="hHh lpR fFf")
-        jp.QHeader(a=layout)
-
-        div = jp.Div(a=wp, classes="bg-gray-200 h-screen")
+        lay = layout.DefaultLayout(a=wp)
+        container = jp.QPageContainer(a=lay)
+        div = jp.Div(a=container, classes="bg-gray-200 h-screen")
         jp.Div(a=div, text="Instant English Dictionary!", classes="text-4xl m-2")
         jp.Div(a=div, text="Get the definition of any English world instantly as you type",
                classes="text-lg")
@@ -26,8 +27,6 @@ class Dictionary:
         input_box.on("input", cls.get_definition)
         # jp.Button(a=input_div, text="Get Definition", classes="border-2 border-green-600 text-gray-500",
         #           click=cls.get_definition, outputdiv=output_div, inputbox=input_box)
-        jp.Div(a=div, classes="m-2 p-2 text-lg border-2 h-40")
-        jp.Div(a=div, classes="m-2 p-2 text-lg border-2 border-green-600 h-40")
 
         print(cls, req)
 
