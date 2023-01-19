@@ -2,9 +2,9 @@ import inspect
 import justpy as jp
 
 from webapp import page
-from webapp.about import About
-from webapp.dictionary import Dictionary
-from webapp.home import Home
+# from webapp.about import About
+# from webapp.dictionary import Dictionary
+# from webapp.home import Home
 
 
 
